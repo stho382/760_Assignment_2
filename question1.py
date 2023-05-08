@@ -18,4 +18,6 @@ def minimax_regret_decision(profit_values):
     """
     return np.min(np.max(np.max(profit_values, axis=0) - profit_values, axis=1))
 
-print(minimax_regret_decision(investments))
+if __name__ == "__main__":
+    print(expected_utility(investments, np.array([0.5, 0.3, 0.2])))
+    print(minimax_regret_decision(investments))
