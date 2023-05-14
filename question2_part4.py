@@ -24,7 +24,7 @@ def compute_expec_utility(profit_vals, demand_probs):
         y.get("Invest in B").append(expec_util[1])
         y.get("Do not invest").append(expec_util[2])
 
-    return y
+    return np.array(y.get("Invest in A"))
 
 def determine_optimal_decision(expec_util):
     best_decision = max(max(expec_util.get("Invest in A")),  max(expec_util.get("Invest in B")), max(expec_util.get("Do not invest")))
@@ -37,5 +37,6 @@ def determine_optimal_decision(expec_util):
 
 if __name__ == '__main__':
     x = compute_expec_utility(profit_vals, demand_probs)
-    y = determine_optimal_decision(x)
-    print(y)
+    #y = determine_optimal_decision(x)
+    print(x)
+    # print(y)

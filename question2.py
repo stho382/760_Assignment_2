@@ -1,4 +1,3 @@
-import random
 import numpy as np
 
 def sim_eco_conditions(N):
@@ -41,4 +40,4 @@ if __name__ == "__main__":
     # Storing the simulated outcomes in a vector
     x = sim_eco_conditions(1000)
     y = sim_demand_scenarios(x, 1000)
-    print(y)
+
